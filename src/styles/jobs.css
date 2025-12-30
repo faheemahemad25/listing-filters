@@ -1,0 +1,306 @@
+.fltrBtn {
+    border: none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    /* font-size: 16px; */
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.fltrBtn-downArrow {
+    /* color: #3a3a3ba5; */
+    color: #808080b0;
+    font-size: 13px;
+    background-color: white;
+}
+
+
+/*  =============================================== Filter =============================================== */
+#super-filter-container {
+    /* border: 2px solid purple; */
+    background-color: rgba(180, 180, 180, 0.068);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+      margin-bottom: 1rem;
+    /* justify-content: space-between; */
+}
+
+
+/* ===================== Filter : section 1 ===================== */
+
+#filter-container {
+    /* border: 1px solid rgba(128, 128, 128, 0.137); */
+    /* border: 1px solid red; */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+    /* height: 100%; */
+
+}
+
+/* this is parent of 1 and 2 */
+.filter_section {
+    /* border: 2px solid red; */
+    /* padding: 1rem; */
+    position: relative;
+}
+
+/* 1 child */
+.filter_btn_container {
+    border: 2px solid #808080b0;
+    /* padding: 10px; */
+    width: fit-content;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+/* 2 child */
+.filter_list_container {
+    border: 1px solid rgba(128, 128, 128, 0.205);
+    /* border: 2px solid green; */
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.236);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 10px;
+
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    background-color: white;
+}
+
+.filter_btn_container:active {
+    /* background-color: rgba(41, 111, 201, 0.536); */
+    transform: scale(0.98);
+}
+
+
+.filter_list_container label {
+    display: flex;
+    gap: 8px;
+    font-size: 20px;
+    /* flex-wrap: nowrap;  // 👇learing 🔖📗🔖📗: it work when parent have and it appy on parent flex but white-space: nowrap; when child */
+    white-space: nowrap;
+    /*  prevents text from breaking into new line */
+}
+
+/* ===================== Filter : section 2 ===================== */
+
+#super-selectedFilter-container {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    /* height: 100%; */
+
+}
+
+.selected-filter {
+    border: 1px solid rgba(128, 128, 128, 0.444);
+    /* box-shadow: 0 0 5px rgba(128, 128, 128, 0.444); */
+    margin: 3px;
+    background-color: rgba(160, 160, 160, 0.045);
+    border-radius: 8px;
+    padding: 7px;
+    display: inline-block;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+
+}
+
+.clearAllBtn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* ------------------------------------ section  2 ------------------------------------ */
+
+#listing-container {
+    /* border: 1px solid gray; */
+    background-color: #FAFAFA;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+}
+
+/* -------------------  Each list  ------------ */
+#each-item {
+    border: 2px solid rgba(128, 128, 128, 0.197);
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(224, 224, 224, 0.623);
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+/* -------------------  top row ------------ */
+#list-top {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 15px;
+}
+
+.dark-chip {
+    font-size: 12px;
+    color: #18416B;
+    background: rgb(21 145 234 / 13%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 6px
+}
+
+.light-chip {
+    font-size: 12px;
+    color: #1591EA;
+    background: rgb(207 228 251 / 42%);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+}
+
+
+/* -------------------  company name  ------------ */
+#jobTitle {
+    color: #183B56;
+}
+
+#companyEle {
+    margin-block: 5px;
+    /* color: purple; */
+    color: #1591EA;
+
+}
+
+/* -------------------  skill ------------ */
+#skill-container {
+    margin-block: 15px;
+
+}
+
+#skill-chip {
+    border: 1px solid rgba(128, 128, 128, 0.444);
+    margin: 3px;
+    background-color: rgba(160, 160, 160, 0.108);
+    border-radius: 5px;
+    padding: 2px;
+    display: inline-block;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+
+}
+
+
+
+
+/* -------------------  bottom row ------------ */
+#list-bottom {
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-between;
+    margin-block: 5px;
+
+    margin-top: auto;
+    /* 📗🔖 Learning 1 : element is pushed to the bottom */
+}
+
+.text-gray-light {
+    color: gray;
+}
+
+
+/* ========================================================================================== */
+/*  ------------------ media Query ------------------  */
+/* ========================================================================================== */
+
+@media screen and (max-width: 425px) {
+
+    #super-filter-container {
+        /* border: 2px solid purple; */
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 0px;
+
+        /* justify-content: space-between; */
+
+    }
+
+    #filter-container {
+        /* border: 1px solid rgba(128, 128, 128, 0.137); */
+
+        justify-content: space-between;
+        /* align-items: center; */
+        gap: 5px;
+        padding: 0;
+
+    }
+
+    #listing-container {
+        /* border: 1px solid red; */
+        padding: 1px;
+        gap: 2px;
+    }
+
+    #each-item {
+        padding: 4px;
+    }
+
+    .dark-chip {
+        font-size: 10px;
+
+    }
+
+    .light-chip {
+        font-size: 10px;
+
+    }
+
+    #jobTitle {
+        font-size: 16px;
+    }
+
+    #companyEle {
+        font-size: 13px;
+
+    }
+
+    #skill-chip {
+        font-size: 10px;
+    }
+
+    #list-bottom {
+        /* border: 1px solid green; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-block: 5px;
+
+        margin-top: auto;
+        /* 📗🔖 Learning 1 : element is pushed to the bottom */
+    }
+
+    .text-gray-light {
+        /* color: gray; */
+        font-size: 12px;
+
+    }
+}

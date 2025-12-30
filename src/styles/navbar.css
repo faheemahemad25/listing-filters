@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+}
+.header{
+    /* border: 2px solid blue; */
+    background-color: #EBF2FA;
+    /* background-color: #e1caca; */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+#logo{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    /* color: rgb(23, 23, 80); */
+    color: #18416B
+}
+#navbar-menu{
+    /* width: 20%; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-size: 20px;
+    /* border: 2px solid red; */
+
+}
+.menu{
+    text-decoration: none;
+    padding: 10px;
+    color: #18416B;
+    display: flex;
+    align-items: center;
+}
+
+/* ----------------------- active class----------------- */
+.active{
+    background-color: #cfe4fb;
+    border-radius: 10px;
+    /* color: #b43535; */
+    color: #1591EA;
+}
+
+
+/* ========================================================================================== */
+/*  ------------------ media Query ------------------  */
+/* ========================================================================================== */
+
+@media screen and (max-width: 425px) {
+    .header{
+    /* border: 2px solid blue; */
+    background-color: #EBF2FA;
+    /* background-color: #e1caca; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+}
