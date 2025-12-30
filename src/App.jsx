@@ -39,8 +39,7 @@ function App() {
       {/* 🟢Topic 1 : Routes created */}
       <Routes>
         <Route element={<Navbar />}> {/* 🟢Topic 4 : Layout Route */} {/* 📗🔖Learning 2 : <Navbar />: open and close tag is used to when specific compoent just show on selected routes other than or outer route pe ye nhi show hoga.   */}
-          <Route path="/listing-filters"
-            element={
+          <Route path="/" element={
               <div>
                 <Home />
               </div>
@@ -67,6 +66,7 @@ function App() {
         <Route path="/user/:id" element={<User />} />  
 
 
+        
         {/* 🟢Topic 3 : Nested Route  //📗🔖 parent route ye h humara*/}
         <Route path="/college" element={<College />} >         {/*  Parent Route  */}
           <Route index element={<Students />} />    {/* 🟢Topic 4 : Index Route */}
@@ -84,8 +84,7 @@ function App() {
         <Route path="/user/Signup" element={<Login />} />
         <Route path="/user/forgot" element={<Login />} />
 
-        <Route path="/*" element={ <Home />} />
-
+        <Route path="/*" element={ <NotFound />} />
       </Routes>
 
     </>
