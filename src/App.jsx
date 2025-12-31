@@ -29,42 +29,68 @@ import Jobs from "./components/URLparameters/Jobs";
 
 function App() {
   return (
-    <>
+   <>
+      {/* <h1>1st Style : JSX-based Routing</h1> */}
+
+
+      {/* 🟢Topic 2 :  Navigation*/}
+      {/* <Navbar /> */}
+
+
+      {/* 🟢Topic 1 : Routes created */}
       <Routes>
-        {/* Routes with Navbar */}
-        <Route element={<Navbar />}>
-          <Route path="/" element={<Home />} />
+        <Route element={<Navbar />}> {/* 🟢Topic 4 : Layout Route */} {/* 📗🔖Learning 2 : <Navbar />: open and close tag is used to when specific compoent just show on selected routes other than or outer route pe ye nhi show hoga.   */}
+          <Route path="/"
+            element={
+              <div>
+                <Home />
+              </div>
+            } />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/users" element={<Users />} />
-          <Route path="/Courses" element={<Courses />} />
+          <Route path="/Courses"
+            element={
+              <>
+                {/* <Filter />
+                   <Search /> */}
+                <Courses />
+              </>
+            } />
           <Route path="/our-placements" element={<Placements />} />
           <Route path="/jobs" element={<Jobs />} />
         </Route>
+         {/* 👇 Routes without Navbar */}
 
-        {/* Routes without Navbar */}
-        <Route path="/user/:id" element={<User />} />
+       
+        {/* 🟢Topic 5 : Dynamic Route */}        
+        {/* <Route path="/users" element={<Users />} />          */}  
+        <Route path="/user/:id" element={<User />} />  
 
-        {/* Nested routes for College Dashboard */}
-        <Route path="/college" element={<College />}>
-          <Route index element={<Students />} />
-          <Route path="students" element={<Students />} />
+
+        {/* 🟢Topic 3 : Nested Route  //📗🔖 parent route ye h humara*/}
+        <Route path="/college" element={<College />} >         {/*  Parent Route  */}
+          <Route index element={<Students />} />    {/* 🟢Topic 4 : Index Route */}
+          <Route path="students" element={<Students />} />     {/*  Child Route or Routes   */}
           <Route path="faculty" element={<Faculty />} />
           <Route path="documents" element={<Documents />} />
           <Route path="fees" element={<Fees />} />
         </Route>
 
-        {/* Other standalone routes */}
         <Route path="/search" element={<Search />} />
+        {/* <Route path="/login" element={<Login />} /> */}
+
+        {/* 🟢Topic 6 : Route Prefixes */}
         <Route path="/user/login" element={<Login />} />
         <Route path="/user/Signup" element={<Login />} />
         <Route path="/user/forgot" element={<Login />} />
 
-        {/* Fallback route */}
         <Route path="*" element={<NotFound />} />
+
       </Routes>
 
     </>
+
   )
 }
 export default App
