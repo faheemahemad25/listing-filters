@@ -61,7 +61,7 @@ function App() {
         <Route path="/user/forgot" element={<Login />} />
 
         {/* Fallback route */}
-        <Route path="*" element={<NotFound />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
 
     </>
