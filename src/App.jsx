@@ -32,7 +32,7 @@ function App() {
     <>
       <Routes>
         {/* Routes with Navbar */}
-        {/* <Route element={<Navbar />}> */}
+        <Route element={<Navbar />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
@@ -40,7 +40,7 @@ function App() {
           <Route path="/Courses" element={<Courses />} />
           <Route path="/our-placements" element={<Placements />} />
           <Route path="/jobs" element={<Jobs />} />
-        {/* </Route> */}
+        </Route>
 
         {/* Routes without Navbar */}
         <Route path="/user/:id" element={<User />} />
