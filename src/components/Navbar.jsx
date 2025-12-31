@@ -15,7 +15,7 @@ function Navbar() {
                 <div >
                     {/* <NavLink id='logo' to="/">Logo</NavLink> */}
                     {/* <NavLink id='logo' to="/"><img style={{width:"100px"}} src="https://zemez.io/html/wp-content/uploads/sites/9/2017/10/logo.png" alt="yourLogo" /></NavLink> */}
-                    <NavLink id='logo' to="/"><img style={{ width: "100px" }} src="../yourlogoBLUE.jpeg" alt="yourLogo" /></NavLink>
+                    <NavLink id='logo' to="/"><img style={{ width: "100px" }} src="yourlogoBLUE.jpeg" alt="yourLogo" /></NavLink>
                 </div>
                 <div id='navbar-menu'>
                     <NavLink className='menu' to="/">Home</NavLink>
