@@ -30,13 +30,6 @@ import Jobs from "./components/URLparameters/Jobs";
 function App() {
   return (
    <>
-      {/* <h1>1st Style : JSX-based Routing</h1> */}
-
-
-      {/* 🟢Topic 2 :  Navigation*/}
-      {/* <Navbar /> */}
-
-
       {/* 🟢Topic 1 : Routes created */}
       <Routes>
         <Route element={<Navbar />}> {/* 🟢Topic 4 : Layout Route */} {/* 📗🔖Learning 2 : <Navbar />: open and close tag is used to when specific compoent just show on selected routes other than or outer route pe ye nhi show hoga.   */}
