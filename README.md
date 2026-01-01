@@ -1,5 +1,5 @@
 # list Filters ⌛
-click to see https://faheemahemad25.github.io/listing-filters
+click to see https://faheemahemad25.github.io/listing-filters/#/jobs
 <br>
 <br>
 <img src='list-filters.png'>
